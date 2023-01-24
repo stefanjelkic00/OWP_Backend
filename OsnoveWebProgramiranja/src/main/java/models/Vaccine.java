@@ -12,8 +12,8 @@ public class Vaccine {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private int id;
-		private String ime;
-		private int dostupnaKolicina;
+		private String name;
+		private int availableSupply;
 		
 		@ManyToOne
 		@JoinColumn(name = "proizvodjac", referencedColumnName = "id", nullable = false)
@@ -23,11 +23,11 @@ public class Vaccine {
 			super();
 		}
 
-		public Vaccine(int id, String ime, int dostupnaKolicina, VaccineProducer vaccineProducer) {
+		public Vaccine(int id, String name, int availableSupply, VaccineProducer vaccineProducer) {
 			super();
 			this.id = id;
-			this.ime = ime;
-			this.dostupnaKolicina = dostupnaKolicina;
+			this.name = name;
+			this.availableSupply = availableSupply;
 			this.vaccineProducer = vaccineProducer;
 		}
 
@@ -39,20 +39,20 @@ public class Vaccine {
 			this.id = id;
 		}
 
-		public String getIme() {
-			return ime;
+		public String getName() {
+			return name;
 		}
 
-		public void setIme(String ime) {
-			this.ime = ime;
+		public void setName(String name) {
+			this.name = name;
 		}
 
-		public int getDostupnaKolicina() {
-			return dostupnaKolicina;
+		public int getAvailableSupply() {
+			return availableSupply;
 		}
 
-		public void setDostupnaKolicina(int dostupnaKolicina) {
-			this.dostupnaKolicina = dostupnaKolicina;
+		public void setAvailableSupply(int availableSupply) {
+			this.availableSupply = availableSupply;
 		}
 
 		public VaccineProducer getVaccineProducer() {
@@ -65,9 +65,10 @@ public class Vaccine {
 
 		@Override
 		public String toString() {
-			return "Vaccine [id=" + id + ", ime=" + ime + ", dostupnaKolicina=" + dostupnaKolicina + "]";
+			return "Vaccine [id=" + id + ", name=" + name + ", availableSupply=" + availableSupply + "]";
 		}
-	
+
+		
 		
 		
 }

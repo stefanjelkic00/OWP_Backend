@@ -19,11 +19,11 @@ public class SignUpForVaccine {
 		private int id;
 
 		@ManyToOne
-		@JoinColumn(name = "pacijent", referencedColumnName = "id", nullable = false)
+		@JoinColumn(name = "patient", referencedColumnName = "id", nullable = false)
 		private User patient;
 
 		@ManyToOne
-		@JoinColumn(name = "vakcina", referencedColumnName = "id", nullable = false)
+		@JoinColumn(name = "vaccine", referencedColumnName = "id", nullable = false)
 		private Vaccine vaccine;
 
 		public SignUpForVaccine() {

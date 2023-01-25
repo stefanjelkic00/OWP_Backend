@@ -19,8 +19,8 @@ public class DeliveryRequest {
 		private int id;
 
 		@ManyToOne
-		@JoinColumn(name = "vakcina", referencedColumnName = "id", nullable = false)
-		private Vaccine vakcina;
+		@JoinColumn(name = "vaccine", referencedColumnName = "id", nullable = false)
+		private Vaccine vaccine;
 
 		private int vaccineAmount;
 
@@ -36,11 +36,11 @@ public class DeliveryRequest {
 			super();
 		}
 
-		public DeliveryRequest(int id, Vaccine vakcina, int vaccineAmount, String deliveryReason, String adminMessage,
+		public DeliveryRequest(int id, Vaccine vaccine, int vaccineAmount, String deliveryReason, String adminMessage,
 				DeliveryStatus status) {
 			super();
 			this.id = id;
-			this.vakcina = vakcina;
+			this.vaccine = vaccine;
 			this.vaccineAmount = vaccineAmount;
 			this.deliveryReason = deliveryReason;
 			this.adminMessage = adminMessage;
@@ -55,12 +55,12 @@ public class DeliveryRequest {
 			this.id = id;
 		}
 
-		public Vaccine getVakcina() {
-			return vakcina;
+		public Vaccine getVaccine() {
+			return vaccine;
 		}
 
-		public void setVakcina(Vaccine vakcina) {
-			this.vakcina = vakcina;
+		public void setVaccine(Vaccine vaccine) {
+			this.vaccine = vaccine;
 		}
 
 		public int getVaccineAmount() {
@@ -95,12 +95,7 @@ public class DeliveryRequest {
 			this.status = status;
 		}
 
-		@Override
-		public String toString() {
-			return "DeliveryRequest [id=" + id + ", vakcina=" + vakcina + ", vaccineAmount=" + vaccineAmount
-					+ ", deliveryReason=" + deliveryReason + ", adminMessage=" + adminMessage + ", status=" + status
-					+ "]";
-		}
+		
 		
 		
 		

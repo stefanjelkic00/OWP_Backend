@@ -3,8 +3,10 @@ package models;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Entity;
 
 
+@Entity
 public class User {
 	@jakarta.persistence.Id
 	@jakarta.persistence.GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)

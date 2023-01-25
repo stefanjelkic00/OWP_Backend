@@ -15,19 +15,24 @@ public class News {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private int id;
+		
 		private String name;
+		
 		private String content;
+		
 		@Column(columnDefinition = "TIMESTAMP")
-		private LocalDateTime dateOfUpload;
+		private LocalDateTime dateAndTimeOfUpload;
+		
+		
 		public News() {
 			super();
 		}
-		public News(int id, String name, String content, LocalDateTime dateOfUpload) {
+		public News(int id, String name, String content, LocalDateTime dateAndTimeOfUpload) {
 			super();
 			this.id = id;
 			this.name = name;
 			this.content = content;
-			this.dateOfUpload = dateOfUpload;
+			this.dateAndTimeOfUpload = dateAndTimeOfUpload;
 		}
 		public int getId() {
 			return id;
@@ -47,17 +52,14 @@ public class News {
 		public void setContent(String content) {
 			this.content = content;
 		}
-		public LocalDateTime getDateOfUpload() {
-			return dateOfUpload;
+		public LocalDateTime getDateAndTimeOfUpload() {
+			return dateAndTimeOfUpload;
 		}
-		public void setDateOfUpload(LocalDateTime dateOfUpload) {
-			this.dateOfUpload = dateOfUpload;
-		}
-		@Override
-		public String toString() {
-			return "News [id=" + id + ", name=" + name + ", content=" + content + ", dateOfUpload=" + dateOfUpload
-					+ "]";
+		public void setDateAndTimeOfUpload(LocalDateTime dateAndTimeOfUpload) {
+			this.dateAndTimeOfUpload = dateAndTimeOfUpload;
 		}
 	
+		
+		
 
 }

@@ -19,7 +19,7 @@ public class Vaccine {
 		private int availableSupply;
 		
 		@ManyToOne
-		@JoinColumn(name = "proizvodjac", referencedColumnName = "id", nullable = false)
+		@JoinColumn(name = "producer", referencedColumnName = "id", nullable = false)
 		private VaccineProducer vaccineProducer;
 
 		public Vaccine() {

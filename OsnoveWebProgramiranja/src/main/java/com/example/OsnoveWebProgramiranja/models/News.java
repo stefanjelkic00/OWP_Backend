@@ -1,4 +1,4 @@
-package models;
+package com.example.OsnoveWebProgramiranja.models;
 
 import java.time.LocalDateTime;
 

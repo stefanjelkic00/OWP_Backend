@@ -1,4 +1,7 @@
-package modelUtils;
+package com.example.OsnoveWebProgramiranja.modelUtils;
+
+import com.example.OsnoveWebProgramiranja.models.User;
+import com.example.OsnoveWebProgramiranja.models.Vaccine;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,8 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import models.User;
-import models.Vaccine;
 
 @Entity
 public class SignUpForVaccine {
